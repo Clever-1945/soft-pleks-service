@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"]</title>
+    
+    <link rel="stylesheet" type="text/css" href="~/extjs/classic/theme-gray/resources/theme-gray-all.css">
+    
+    <script type="text/javascript" src="~/extjs/ext-all.js"></script>
+    <script type="text/javascript" src="~/extjs/classic/theme-gray/theme-gray.js" defer=""></script>
+    <script type="text/javascript" src="~/extjs/packages/ux/classic/ux.js"></script>
+    <script type="text/javascript" src="~/extjs/packages/charts/classic/charts.js"></script>
+    <script type="text/javascript" src="~/app/dialogs.js?id=@(Guid.NewGuid().ToString("n"))"></script>
+    <script type="text/javascript" src="~/app/assistant.js?id=@(Guid.NewGuid().ToString("n"))"></script>
+
+</head>
+<body>
+
+@RenderBody()
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

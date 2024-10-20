@@ -1,0 +1,73 @@
+﻿<Window x:Class="SetupApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SetupApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="650"
+        Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Margin="3" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            Добрый день!<LineBreak />
+            Меня зовут Сергей и я пытаюсь стать частью вашей команды. Для этого мне надо выполнить успешно тестовое задание.<LineBreak />
+            Это приложение является помощником для установки сервиса, сервера и настройки базы данных.<LineBreak />
+            Предполагается, что приложение будет работать с СУБД MS SQL.<LineBreak />
+            База данных должна быть пустой. Приложение создаст все таблицы, триггеры, индексы и процедуры.<LineBreak />
+            После настройки базы данных будут установлены сервис и сервер
+        </TextBlock>
+        
+        <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBlock>
+        
+        <Label Margin="4 0 4 0" Padding="0" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">Строка подключения к БД</Label>
+        <TextBox Margin="2" Padding="2" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="TextConnectionString"></TextBox>
+        
+        <Label Margin="4 0 4 0" Padding="0" Grid.Row="4" Grid.Column="0" >Папка для сервиса API</Label>
+        <Label Margin="4 0 4 0" Padding="0" Grid.Row="4" Grid.Column="1" >Порт сервиса</Label>
+        
+        <TextBox Margin="2" Padding="2" Grid.Row="5" Grid.Column="0" Name="TextPathService"></TextBox>
+        <TextBox Margin="2" Padding="2" Grid.Row="5" Grid.Column="1" Name="TextPortService"></TextBox>
+        
+        <Label Margin="4 0 4 0" Padding="0" Grid.Row="6" Grid.Column="0" >Папка для сервера API</Label>
+        <Label Margin="4 0 4 0" Padding="0" Grid.Row="6" Grid.Column="1" >Порт сервера</Label>
+        
+        <TextBox Margin="2" Padding="2" Grid.Row="7" Grid.Column="0" Name="TextPathServer"></TextBox>
+        <TextBox Margin="2" Padding="2" Grid.Row="7" Grid.Column="1" Name="TextPortServer"></TextBox>
+        
+        <Label Margin="4 0 4 0" Padding="0" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" >Процесс устанвки</Label>
+        <TextBox Margin="2" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Name="TextLog" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+        
+        
+        <Grid Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Click="OnCheckConnect" Margin="2" Grid.Row="0" Grid.Column="0" > Проверить подключение к БД </Button>
+            <Button Click="OnInstall" Margin="2" Grid.Row="0" Grid.Column="2"> Установить </Button>
+        </Grid>
+    </Grid>
+</Window>

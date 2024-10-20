@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\sql\1.sql" />
+      <EmbeddedResource Include="Resources\sql\1.sql" />
+      <None Remove="Resources\sql\2.sql" />
+      <EmbeddedResource Include="Resources\sql\2.sql" />
+      <None Remove="Resources\sql\3.sql" />
+      <EmbeddedResource Include="Resources\sql\3.sql" />
+      <None Remove="Resources\sql\4.sql" />
+      <EmbeddedResource Include="Resources\sql\4.sql" />
+      <None Remove="Resources\sql\5.sql" />
+      <EmbeddedResource Include="Resources\sql\5.sql" />
+      <None Remove="Resources\sql\6.sql" />
+      <EmbeddedResource Include="Resources\sql\6.sql" />
+      <None Remove="Resources\sql\7.sql" />
+      <EmbeddedResource Include="Resources\sql\7.sql" />
+      <None Remove="Resources\WebServerApp.zip" />
+      <None Remove="Resources\WebServiceApp.zip" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\WebServerApp.zip" />
+      <EmbeddedResource Include="Resources\WebServiceApp.zip" />
+    </ItemGroup>
+
+</Project>

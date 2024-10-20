@@ -1,0 +1,4 @@
+﻿{
+  "ConnectionString": "Data Source=DESKTOP-35GV7B5\\SQLEXPRESS;Database=TestDb;User Id=sa;Password=sql-555900;TrustServerCertificate=True;Encrypt=False;MultiSubnetFailover=False",
+  "Port": 4000
+}
